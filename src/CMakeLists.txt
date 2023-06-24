@@ -7,7 +7,7 @@ endif()
 
 find_package(Threads REQUIRED)
 
-add_library(libexecstream ${libtype} exec-stream.cpp)
+add_library(libexecstream ${libtype} "${CMAKE_CURRENT_LIST_DIR}/exec-stream.cpp")
 target_include_directories(libexecstream PUBLIC "${CMAKE_SOURCE_DIR}/include")
 target_link_libraries(libexecstream PUBLIC ${CMAKE_THREAD_LIBS_INIT})
 
